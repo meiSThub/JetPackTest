@@ -21,6 +21,7 @@
         </activity>
         <activity android:name=".ui.baseused.RepositoryListActivity" />
         <activity android:name=".ui.addfooter.AddFooterAndHeaderActivity" />
+        <activity android:name=".ui.smartrefresh.SmartRefreshActivity" />
     </application>
 
 </manifest>

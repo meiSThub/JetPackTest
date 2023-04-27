@@ -4,6 +4,9 @@ import android.app.Application
 import com.elvishew.xlog.LogConfiguration
 import com.elvishew.xlog.LogLevel
 import com.elvishew.xlog.XLog
+import com.scwang.smart.refresh.footer.ClassicsFooter
+import com.scwang.smart.refresh.header.ClassicsHeader
+import com.scwang.smart.refresh.layout.SmartRefreshLayout
 
 /**
  * @Author: meixianbing
@@ -11,6 +14,16 @@ import com.elvishew.xlog.XLog
  * @Description:
  */
 class MyApplication : Application() {
+    companion object {
+        init {
+            SmartRefreshLayout.setDefaultRefreshHeaderCreator { context, layout ->
+                ClassicsHeader(context)
+            }
+            SmartRefreshLayout.setDefaultRefreshFooterCreator { context, layout ->
+                ClassicsFooter(context)
+            }
+        }
+    }
 
     override fun onCreate() {
         super.onCreate()
