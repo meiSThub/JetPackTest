@@ -19,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.repositorylist.RepositoryListActivity" />
+        <activity android:name=".ui.baseused.RepositoryListActivity" />
     </application>
 
 </manifest>

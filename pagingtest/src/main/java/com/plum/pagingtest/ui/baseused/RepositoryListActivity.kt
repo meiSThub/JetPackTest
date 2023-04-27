@@ -1,4 +1,4 @@
-package com.plum.pagingtest.ui.repositorylist
+package com.plum.pagingtest.ui.baseused
 
 import android.os.Bundle
 import android.view.View
@@ -14,8 +14,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.elvishew.xlog.XLog
 import com.plum.pagingtest.bean.RepositoryItem
 import com.plum.pagingtest.databinding.ActivityRepositoryListBinding
-import com.plum.pagingtest.ui.repositorylist.adapter.RepositoryListAdapter
-import com.plum.pagingtest.ui.repositorylist.viewmodel.RepositoryViewModel
+import com.plum.pagingtest.ui.baseused.adapter.RepositoryListAdapter
+import com.plum.pagingtest.ui.baseused.viewmodel.RepositoryViewModel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 

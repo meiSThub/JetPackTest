@@ -1,4 +1,4 @@
-package com.plum.pagingtest.ui.repositorylist.repository
+package com.plum.pagingtest.ui.baseused.repository
 
 import androidx.paging.Pager
 import androidx.paging.PagingConfig

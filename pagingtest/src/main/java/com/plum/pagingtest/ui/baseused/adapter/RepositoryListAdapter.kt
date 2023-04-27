@@ -1,4 +1,4 @@
-package com.plum.pagingtest.ui.repositorylist.adapter
+package com.plum.pagingtest.ui.baseused.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

@@ -1,4 +1,4 @@
-package com.plum.pagingtest.ui.repositorylist.viewmodel
+package com.plum.pagingtest.ui.baseused.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -6,7 +6,7 @@ import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.elvishew.xlog.XLog
 import com.plum.pagingtest.bean.RepositoryItem
-import com.plum.pagingtest.ui.repositorylist.repository.Repository
+import com.plum.pagingtest.ui.baseused.repository.Repository
 import kotlinx.coroutines.flow.Flow
 
 /**
