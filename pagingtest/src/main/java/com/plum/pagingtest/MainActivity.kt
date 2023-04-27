@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.plum.pagingtest.ui.addfooter.AddFooterAndHeaderActivity
 import com.plum.pagingtest.ui.baseused.RepositoryListActivity
 
 class MainActivity : AppCompatActivity() {
@@ -14,5 +15,9 @@ class MainActivity : AppCompatActivity() {
 
     fun pagingTest(view: View) {
         startActivity(Intent(this, RepositoryListActivity::class.java))
+    }
+
+    fun addFooterAndHeader(view: View) {
+        startActivity(Intent(this, AddFooterAndHeaderActivity::class.java))
     }
 }
