@@ -1,19 +1,20 @@
 pluginManagement {
     repositories {
+        mavenLocal()
         google()
         mavenCentral()
         gradlePluginPortal()
-        mavenLocal()
     }
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        mavenLocal()
         google()
         mavenCentral()
-        mavenLocal()
     }
 }
 rootProject.name = "JetPackTest"
 include ':app'
 include ':pagingtest'
+include ':roomtest'
