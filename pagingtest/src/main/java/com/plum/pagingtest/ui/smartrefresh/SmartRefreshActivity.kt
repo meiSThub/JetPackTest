@@ -62,11 +62,15 @@ class SmartRefreshActivity : AppCompatActivity() {
                     binding.refreshLayout.finishLoadMore()
                 }
                 is LoadState.Loading -> {
-                    binding.progressBar.visibility = View.VISIBLE
-                    binding.recyclerView.visibility = View.INVISIBLE
-                    // binding.refreshLayout.isRefreshing = true
-                    // 显示刷新动画，不触发事件
-                    binding.refreshLayout.autoRefreshAnimationOnly()
+                    if (adapter.itemCount > 0) {
+                        // 显示刷新动画，不触发事件
+                        binding.refreshLayout.autoRefreshAnimationOnly()
+                    } else {
+                        // 说明是第一次加载数据，显示页面loading
+                        binding.progressBar.visibility = View.VISIBLE
+                        binding.recyclerView.visibility = View.INVISIBLE
+                        // binding.refreshLayout.isRefreshing = true
+                    }
                 }
                 is LoadState.Error -> {
                     binding.progressBar.visibility = View.INVISIBLE
