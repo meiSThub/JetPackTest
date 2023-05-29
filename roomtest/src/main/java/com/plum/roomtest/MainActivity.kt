@@ -1,16 +1,11 @@
 package com.plum.roomtest
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.plum.roomtest.adapter.WordAdapter
-import com.plum.roomtest.data.WordEntity
 import com.plum.roomtest.databinding.ActivityMainBinding
-import com.plum.roomtest.db.WordDB
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import com.plum.roomtest.ui.baseuse.BaseUseActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,54 +13,19 @@ class MainActivity : AppCompatActivity() {
         ActivityMainBinding.inflate(layoutInflater)
     }
 
-    private val wordDao by lazy {
-        WordDB.getInstance(this).getWordDao()
-    }
-    private val adapter by lazy {
-        WordAdapter(this, mutableListOf())
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        binding.recyclerview.layoutManager = LinearLayoutManager(this)
-        binding.recyclerview.adapter = adapter
 
-        binding.btnSave.setOnClickListener {
-            lifecycleScope.launch {
-                val saveWord = binding.et.text.toString()
-                withContext(Dispatchers.IO) {
-                    wordDao.insert(WordEntity(word = saveWord))
-                }
-                updateData()
-            }
-        }
+        binding.btnBaseUse.setOnClickListener(this::onClick)
 
-        binding.btnDelete.setOnClickListener {
-            lifecycleScope.launch {
-                withContext(Dispatchers.IO) {
-                    wordDao.deleteAll()
-                }
-                updateData()
-            }
-        }
-        queryAll()
+        binding.btnAddNewTable.setOnClickListener(this::onClick)
     }
 
-    private fun queryAll() {
-        lifecycleScope.launch {
-            val list = withContext(Dispatchers.IO) { wordDao.queryAll() }
-            adapter.setNewData(list)
-        }
-    }
-
-
-    private fun updateData() {
-        lifecycleScope.launch {
-            val list = withContext(Dispatchers.IO) {
-                wordDao.queryAll()
-            }
-            adapter.setNewData(list)
+    private fun onClick(v: View) {
+        when (v.id) {
+            R.id.btnBaseUse -> startActivity(Intent(this, BaseUseActivity::class.java))
+            R.id.btnAddNewTable -> {}
         }
     }
 }

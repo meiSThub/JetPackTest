@@ -6,28 +6,45 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        tools:ignore="HardcodedText,LabelFor" />
+
     <Button
-        android:id="@+id/btnBaseUse"
+        android:id="@+id/btn_save"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_margin="16dp"
         android:background="@color/teal_200"
-        android:text="基本使用"
+        android:text="Save"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="14sp"
         tools:ignore="HardcodedText" />
 
     <Button
-        android:id="@+id/btnAddNewTable"
+        android:id="@+id/btn_delete"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="@color/teal_200"
-        android:text="添加新表"
+        android:text="Delete All"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="14sp"
         tools:ignore="HardcodedText" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp" />
 </LinearLayout>
