@@ -6,6 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.plum.roomtest.databinding.ActivityMainBinding
 import com.plum.roomtest.ui.baseuse.BaseUseActivity
+import com.plum.roomtest.ui.order.OrderInfoActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     private fun onClick(v: View) {
         when (v.id) {
             R.id.btnBaseUse -> startActivity(Intent(this, BaseUseActivity::class.java))
-            R.id.btnAddNewTable -> {}
+            R.id.btnAddNewTable -> startActivity(Intent(this, OrderInfoActivity::class.java))
         }
     }
 }

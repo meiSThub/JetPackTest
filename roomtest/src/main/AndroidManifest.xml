@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.baseuse.BaseUseActivity" />
+        <activity android:name=".ui.order.OrderInfoActivity" />
     </application>
 
 </manifest>

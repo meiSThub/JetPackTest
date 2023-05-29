@@ -21,5 +21,12 @@ object WordDbMigration {
             database.execSQL("alter table word_table add column content text")
         }
     }
+
+    val MIGRATION_2_3 = object : Migration(2, 3) {
+        override fun migrate(database: SupportSQLiteDatabase) {
+            // 新增一个表
+            database.execSQL("CREATE TABLE IF NOT EXISTS order_info_table(id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, order_id TEXT, order_info TEXT)")
+        }
+    }
 }
 
