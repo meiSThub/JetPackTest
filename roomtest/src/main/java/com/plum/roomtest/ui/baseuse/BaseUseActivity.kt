@@ -35,7 +35,7 @@ class BaseUseActivity : AppCompatActivity() {
             lifecycleScope.launch {
                 val saveWord = binding.et.text.toString()
                 withContext(Dispatchers.IO) {
-                    wordDao.insert(WordEntity(word = saveWord))
+                    wordDao.insert(WordEntity(word = saveWord, content = "内容：$saveWord"))
                 }
                 updateData()
             }

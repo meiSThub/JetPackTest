@@ -38,6 +38,7 @@ class WordAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = list[position]
         holder.tvWord.text = item.word
+        holder.tvContent.text = item.content
         holder.llItem.setOnClickListener {
             wordDeleteListener.delete(item.id)
         }
@@ -50,6 +51,7 @@ class WordAdapter(
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var tvWord: TextView = itemView.findViewById(R.id.tv_word)
         var llItem: LinearLayout = itemView.findViewById(R.id.ll_item)
+        var tvContent: TextView = itemView.findViewById(R.id.tv_content)
     }
 
     fun setWordDeleteListener(wordDeleteListener: WordDeleteListener) {

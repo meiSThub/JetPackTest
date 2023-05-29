@@ -16,4 +16,7 @@ data class WordEntity(
     val id: Long = 0,// 主键
     @ColumnInfo(name = "word")
     val word: String = "",
+    /*新增字段*/
+    @ColumnInfo
+    val content: String? = null
 )

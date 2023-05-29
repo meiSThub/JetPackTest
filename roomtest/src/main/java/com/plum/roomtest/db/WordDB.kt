@@ -6,6 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.plum.roomtest.dao.WordDao
 import com.plum.roomtest.data.WordEntity
+import com.plum.roomtest.db.update.WordDbMigration
 
 /**
  * @Author: meixianbing
@@ -17,7 +18,7 @@ import com.plum.roomtest.data.WordEntity
  * version：当前数据库的版本号，当需要版本升级会用到；
  * exportSchema：表示导出为文件模式，默认为true,这里要设置为false，不然会报警告。
  */
-@Database(entities = [WordEntity::class], version = 1, exportSchema = false)
+@Database(entities = [WordEntity::class], version = 2, exportSchema = false)
 abstract class WordDB : RoomDatabase() {
     companion object {
         @Volatile
@@ -37,6 +38,7 @@ abstract class WordDB : RoomDatabase() {
 
         private fun createInstance(context: Context): WordDB {
             return Room.databaseBuilder(context.applicationContext, WordDB::class.java, DB_NAME)
+                .addMigrations(WordDbMigration.MIGRATION_1_2)
                 .allowMainThreadQueries()
                 .build()
         }
