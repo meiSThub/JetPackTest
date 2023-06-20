@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:dividerPadding="32dp"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- <Button -->
+    <!--     android:layout_width="match_parent" -->
+    <!--     android:layout_height="60dp" -->
+    <!--     android:onClick="simple" -->
+    <!--     android:text="MVI架构简单使用" -->
+    <!--     tools:ignore="HardcodedText" /> -->
+
+    <!-- <Button -->
+    <!--     android:layout_width="match_parent" -->
+    <!--     android:layout_height="60dp" -->
+    <!--     android:onClick="network" -->
+    <!--     android:text="MVI架构网络封装" -->
+    <!--     tools:ignore="HardcodedText" /> -->
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:onClick="login"
+        android:text="MVI架构登录页面"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:onClick="loginFlow"
+        android:text="MVI架构登录页面Flow版"
+        tools:ignore="HardcodedText" />
+</LinearLayout>

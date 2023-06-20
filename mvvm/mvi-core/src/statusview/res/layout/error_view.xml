@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/error_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:background="#000">
+
+    <ImageView
+        android:id="@+id/status_hint_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_no_network"
+        app:tint="#211F1F" />
+
+    <TextView
+        android:id="@+id/status_hint_content"
+        style="@style/StatusView.Content"
+        android:layout_marginTop="24dp"
+        android:text="@string/error_view_hint" />
+
+    <Button
+        android:id="@+id/error_retry_view"
+        style="@style/StatusView.RetryButton"
+        android:layout_marginTop="40dp"
+        android:text="@string/text_reload" />
+</LinearLayout>

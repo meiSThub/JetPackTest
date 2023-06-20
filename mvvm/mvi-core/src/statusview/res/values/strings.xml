@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="empty_view_hint">暂无数据</string>
+    <string name="error_view_hint">加载失败，请检查网络连接或重新加载</string>
+    <string name="no_network_view_hint">网络异常</string>
+    <string name="loading_view_hint">加载中</string>
+    <string name="text_reload">重新加载</string>
+</resources>

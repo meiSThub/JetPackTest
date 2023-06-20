@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- progressBar大小 -->
+    <dimen name="progressBar_size">90dp</dimen>
+
+    <dimen name="loading_dialog_width">300dp</dimen>
+    <dimen name="loading_dialog_height">300dp</dimen>
+
+    <dimen name="loading_dialog_radius">16dp</dimen>
+
+    <dimen name="common_textSize">32sp</dimen>
+</resources>

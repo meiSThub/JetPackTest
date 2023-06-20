@@ -1,0 +1,6 @@
+include ':mvvm-core'
+project(':mvvm-core').projectDir = file("${rootDir}/mvvm/mvvm-core")
+include ':mvi-core'
+project(':mvi-core').projectDir = file("${rootDir}/mvvm/mvi-core")
+include ':mvisimple'
+project(':mvisimple').projectDir = file("${rootDir}/mvvm/mvisimple")

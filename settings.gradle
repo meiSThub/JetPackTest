@@ -18,3 +18,8 @@ rootProject.name = "JetPackTest"
 include ':app'
 include ':pagingtest'
 include ':roomtest'
+
+apply from: 'mvvm/configs.gradle'
+
+include ':mvi-core'
+include ':mvisimple'

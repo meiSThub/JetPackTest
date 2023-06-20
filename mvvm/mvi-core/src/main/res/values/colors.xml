@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 弹框背景颜色 -->
+    <color name="dialog_bg_color">#928D8D</color>
+    <color name="text_color_common">#7F000000</color>
+    <color name="dialog_text_color">#ffffffff</color>
+</resources>
